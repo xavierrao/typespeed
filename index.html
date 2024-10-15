@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+            text-decoration: line-through;
+        }
+
+        .cursor {
+        width: 2px;
+        height: 20px;
+        background-color: black;
+        display: inline-block;
+        position: absolute;
+        animation: blink 0.7s infinite;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <div id="quote"></div>
+    </p>
+</body>
+<script>
+    let position = 0;
+    const quotes = ["The old clock on the wall ticked loudly, echoing through the empty room. Sarah sat at her desk, fingers hovering over the keyboard, searching for inspiration. Outside, raindrops pattered against the window pane, creating a soothing rhythm. She took a deep breath, closed her eyes, and began to type, letting the words flow freely from her imagination.", 
+                    "As the sun dipped below the horizon, painting the sky in vibrant oranges and pinks, Jack hurried along the busy street. He clutched a small package tightly, weaving through the crowd of commuters heading home. The city hummed with energy, a symphony of car horns, chatter, and footsteps on concrete. Jack checked his watch, quickening his pace.",
+                    "The aroma of freshly baked bread wafted through the air, drawing customers into the small bakery. Emma kneaded dough with practiced hands, her mind wandering to the day ahead. She loved the early morning quiet, broken only by the whir of mixers and the occasional ding of the oven timer. As the first rays of sunlight streamed through the window, Emma smiled text-displayedly.",
+                    "Dr. Martinez peered into the microscope, adjusting the focus carefully. The tiny organisms danced in his field of view, a microscopic ballet of life. He jotted down notes, his excitement growing with each observation. This could be the breakthrough he'd been searching for, the key to unlocking a medical mystery that had puzzled scientists for decades. He leaned back, mind racing with possibilities."];
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    const quote = quotes[getRandomInt(quotes.length)];
+
+    document.getElementById("quote").innerHTML = quote.split("")
+        .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
+        .join("");
+
+    document.addEventListener("keydown", handleKeydown);
+
+    function handleKeydown(event) {
+        const currentChar = document.getElementById(`letter-${position}`);
+        if (event.key.length == 1) {
+            currentChar.classList.add(event.key == quote[position] ? "correct" : "incorrect");
+            position++;
+            console.log(event.key);
+        }
+    }
+</script>
+</html>
