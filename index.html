@@ -49,11 +49,17 @@
     document.addEventListener("keydown", handleKeydown);
 
     function handleKeydown(event) {
-        const currentChar = document.getElementById(`letter-${position}`);
+        let currentChar = document.getElementById(`letter-${position}`);
         if (event.key.length == 1) {
             currentChar.classList.add(event.key == quote[position] ? "correct" : "incorrect");
             position++;
             console.log(event.key);
+        }
+        else if (event.key == "Backspace") {
+            position--;
+            currentChar = document.getElementById(`letter-${position}`);
+            currentChar.classList.remove("correct", "incorrect");
+            console.log(event.key)
         }
     }
 </script>
