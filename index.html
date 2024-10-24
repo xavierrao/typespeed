@@ -15,17 +15,25 @@
         }
 
         .cursor {
-        width: 2px;
-        height: 20px;
-        background-color: black;
-        display: inline-block;
-        position: absolute;
-        animation: blink 0.7s infinite;
+            width: 2px;
+            height: 20px;
+            background-color: black;
+            display: inline-block;
+            position: absolute;
+            animation: blink 1s infinite;
         }
+
+        @keyframes blink {
+            0%{ opacity: 1; }
+            50%{ opacity: 0; }
+            100%{ opacity: 1; }
+        }
+
     </style>
 </head>
 <body>
     <p>
+        <span class="cursor">
         <div id="quote"></div>
     </p>
 </body>
@@ -55,12 +63,20 @@
             position++;
             console.log(event.key);
         }
-        else if (event.key == "Backspace") {
+        else if (event.key == "Backspace" && position > 0) {
             position--;
             currentChar = document.getElementById(`letter-${position}`);
             currentChar.classList.remove("correct", "incorrect");
             console.log(event.key)
         }
+        moveCursor(position);
+    }
+
+    function moveCursor(currentPos) {
+        const currentChar = document.getElementById(`letter-${currentPos}`);
+        const cursor = document.querySelector(".cursor");
+        cursor.style.top = currentChar.getBoundingClientRect().top + 'px';
+        cursor.style.left = currentChar.getBoundingClientRect().left + 'px';
     }
 </script>
 </html>
