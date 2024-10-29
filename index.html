@@ -32,12 +32,16 @@
     </style>
 </head>
 <body>
+    <h2>
+        <div id="timer"></div>
+    </h2>
     <p>
         <span class="cursor">
         <div id="quote"></div>
     </p>
 </body>
 <script>
+    let timer = 30;
     let position = 0;
     const quotes = ["The old clock on the wall ticked loudly, echoing through the empty room. Sarah sat at her desk, fingers hovering over the keyboard, searching for inspiration. Outside, raindrops pattered against the window pane, creating a soothing rhythm. She took a deep breath, closed her eyes, and began to type, letting the words flow freely from her imagination.", 
                     "As the sun dipped below the horizon, painting the sky in vibrant oranges and pinks, Jack hurried along the busy street. He clutched a small package tightly, weaving through the crowd of commuters heading home. The city hummed with energy, a symphony of car horns, chatter, and footsteps on concrete. Jack checked his watch, quickening his pace.",
@@ -53,10 +57,26 @@
     document.getElementById("quote").innerHTML = quote.split("")
         .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
         .join("");
+    document.getElementById("timer").innerHTML = timer.toString();
 
     document.addEventListener("keydown", handleKeydown);
 
+    function timeGame() {
+        const visibility = document.getElementById("timer");
+        visibility.style.visibility = "visible";
+        var t = setInterval(function() {
+            timer--;
+            document.getElementById("timer").innerHTML = timer;
+            if (timer <= 0) {
+                clearInterval(t);
+            }
+        }, 1000);
+    }
+
     function handleKeydown(event) {
+        if (timer <= 0) {
+            return;
+        }
         let currentChar = document.getElementById(`letter-${position}`);
         if (event.key.length == 1) {
             currentChar.classList.add(event.key == quote[position] ? "correct" : "incorrect");
@@ -70,6 +90,9 @@
             console.log(event.key)
         }
         moveCursor(position);
+        if (position == 1) {
+            timeGame();
+        }
     }
 
     function moveCursor(currentPos) {
