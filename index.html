@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TypeSpeedrun</title>
     <style>
         body {
             background-color: #4F7F7F;
             color: #C4D3CC;
             font-family: 'Open Sans';
             font-size: 1.4rem;
-            width: 600px;
+            width: 650px;
             margin: 50px auto;
+        }
+
+        #timer {
+            text-align: center;
+            visibility: visible;
         }
 
         .correct {
@@ -27,7 +32,6 @@
             width: 2px;
             height: 20px;
             background-color: #B2BEB5;
-            display: inline-block;
             position: absolute;
             animation: blink 1s infinite;
         }
@@ -38,20 +42,54 @@
             100%{ opacity: 1; }
         }
 
+        #cursorVisibility {
+            display: inline-block;
+        }
+
+        #quote {
+            visibility: visible;
+        }
+
+        #wpm {
+            text-align: center;
+            visibility: hidden;
+        }
+
+        #accuracy {
+            text-align: center;
+            visibility: hidden;
+        }
+
+        #type {
+            text-align: center;
+            visibility: hidden;
+        }
+
     </style>
 </head>
 <body>
+    <h1>
+        TypeSpeedrun
+    </h1>
     <h2>
         <div id="timer"></div>
     </h2>
     <p>
-        <span class="cursor">
+        <div id="wpm"></div>
+        <div id="accuracy"></div>
+        <div id="type"></div>
+    </p>
+    <p>
+        <span id="cursorVisibility" class="cursor">
         <div id="quote"></div>
     </p>
 </body>
 <script>
     let timer = 30;
+    let seconds = timer/60;
     let position = 0;
+    let correct = 0;
+    let incorrect = 0;
     const quotes = ["The old clock on the wall ticked loudly, echoing through the empty room. Sarah sat at her desk, fingers hovering over the keyboard, searching for inspiration. Outside, raindrops pattered against the window pane, creating a soothing rhythm. She took a deep breath, closed her eyes, and began to type, letting the words flow freely from her imagination.", 
                     "As the sun dipped below the horizon, painting the sky in vibrant oranges and pinks, Jack hurried along the busy street. He clutched a small package tightly, weaving through the crowd of commuters heading home. The city hummed with energy, a symphony of car horns, chatter, and footsteps on concrete. Jack checked his watch, quickening his pace.",
                     "The aroma of freshly baked bread wafted through the air, drawing customers into the small bakery. Emma kneaded dough with practiced hands, her mind wandering to the day ahead. She loved the early morning quiet, broken only by the whir of mixers and the occasional ding of the oven timer. As the first rays of sunlight streamed through the window, Emma smiled text-displayedly.",
@@ -78,6 +116,7 @@
             document.getElementById("timer").innerHTML = timer;
             if (timer <= 0) {
                 clearInterval(t);
+                endTest();
             }
         }, 1000);
     }
@@ -89,6 +128,8 @@
         let currentChar = document.getElementById(`letter-${position}`);
         if (event.key.length == 1) {
             currentChar.classList.add(event.key == quote[position] ? "correct" : "incorrect");
+            if (event.key == quote[position]) { correct++; }
+            else { incorrect++; }
             position++;
             console.log(event.key);
         }
@@ -109,6 +150,28 @@
         const cursor = document.querySelector(".cursor");
         cursor.style.top = currentChar.getBoundingClientRect().top + 'px';
         cursor.style.left = currentChar.getBoundingClientRect().left + 'px';
+    }
+
+    function endTest() {
+        calculateResults();
+
+        document.getElementById("timer").style.visibility = "hidden";
+        document.getElementById("wpm").style.visibility = "visible";
+        document.getElementById("accuracy").style.visibility = "visible";
+        document.getElementById("type").style.visibility = "visible";
+        document.getElementById("quote").style.visibility = "hidden";
+        document.getElementById("cursorVisibility").style.display = "none";
+    }
+
+    function calculateResults() {
+        const wpm = position / 5 / seconds;
+        const accuracy = correct / (correct + incorrect) * 100;
+        var type = "30 seconds";
+        document.getElementById("wpm").innerHTML = "WPM: " + wpm.toFixed(0);
+        // document.getElementById("morewpm").innerHTML = wpm.toFixed(2) + " wpm";
+        document.getElementById("accuracy").innerHTML = "Accuracy: " + accuracy.toFixed(0) + "%";
+        // document.getElementById("moreaccuracy").innerHTML = "Accuracy: " + accuracy.toFixed(2) + "% (" + correct + " correct / " + incorrect + " incorrect)";
+        document.getElementById("type").innerHTML = "Test Type: " + type;
     }
 </script>
 </html>
