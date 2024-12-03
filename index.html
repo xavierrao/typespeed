@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>TypeSpeedrun</title>
     <style>
         body {
             background-color: #4F7F7F;
+        }
+
+        .notFooter {
             color: #C4D3CC;
             font-family: 'Open Sans';
             font-size: 1.4rem;
-            width: 650px;
+            width: 700px;
             margin: 50px auto;
         }
 
@@ -42,54 +46,88 @@
             100%{ opacity: 1; }
         }
 
-        #cursorVisibility {
-            display: inline-block;
+        .stats {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 250px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         }
 
-        #quote {
-            visibility: visible;
-        }
-
-        #wpm {
+        .stat-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            border-radius: 0.5em;
+            width: 45%;
             text-align: center;
-            visibility: hidden;
+            color: black;
         }
 
-        #accuracy {
+        #button {
+            font-size: 18px;
+        }
+
+        footer {
+            position: fixed;
             text-align: center;
-            visibility: hidden;
+            bottom: 10px;
+            font-size: 1.2rem;
+            width: 100%;
         }
 
-        #type {
-            text-align: center;
-            visibility: hidden;
+        a:link, a:visited {
+            color: #284444;
+            text-decoration: none;
         }
 
+        a:hover {
+            color: #336666;
+        }
     </style>
 </head>
 <body>
-    <h1>
-        TypeSpeedrun
-    </h1>
-    <h2>
-        <div id="timer"></div>
-    </h2>
-    <p>
-        <div id="wpm"></div>
-        <div id="accuracy"></div>
-        <div id="type"></div>
-    </p>
-    <p>
-        <span id="cursorVisibility" class="cursor">
-        <div id="quote"></div>
-    </p>
+    <div class="notFooter">
+        <h1>
+            TypeSpeedrun
+        </h1>
+        <h2>
+            <div id="timer"></div>
+        </h2>
+        <p>
+            <span id="cursorVisibility" class="cursor">
+            <div id="quote"></div>
+        </p>
+        <div id="stats" class="stats">
+            <div class="stat-content">
+                <div id="wpm"></div>
+                <div id="accuracy"></div>
+                <div id="type"></div>
+                <br>
+                <div id="newGameButton">
+                    <button id="button">New Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<footer>
+    <a href="https://github.com/xavierrao/typespeed"><i class="fa fa-github"></i> github</a>
+    &nbsp;
+    <a href="http://www.xavierrao.com">Personal blog</a>
+</footer>
 <script>
-    let timer = 30;
-    let seconds = timer/60;
-    let position = 0;
-    let correct = 0;
-    let incorrect = 0;
+    document.getElementById("newGameButton").addEventListener('click', () => {
+        newGame();
+        document.getElementById("stats").style.display = "none";
+    });
     const quotes = ["The old clock on the wall ticked loudly, echoing through the empty room. Sarah sat at her desk, fingers hovering over the keyboard, searching for inspiration. Outside, raindrops pattered against the window pane, creating a soothing rhythm. She took a deep breath, closed her eyes, and began to type, letting the words flow freely from her imagination.", 
                     "As the sun dipped below the horizon, painting the sky in vibrant oranges and pinks, Jack hurried along the busy street. He clutched a small package tightly, weaving through the crowd of commuters heading home. The city hummed with energy, a symphony of car horns, chatter, and footsteps on concrete. Jack checked his watch, quickening his pace.",
                     "The aroma of freshly baked bread wafted through the air, drawing customers into the small bakery. Emma kneaded dough with practiced hands, her mind wandering to the day ahead. She loved the early morning quiet, broken only by the whir of mixers and the occasional ding of the oven timer. As the first rays of sunlight streamed through the window, Emma smiled text-displayedly.",
@@ -99,12 +137,18 @@
       return Math.floor(Math.random() * max);
     }
 
-    const quote = quotes[getRandomInt(quotes.length)];
+    var timer = 30;
+    var seconds = timer / 60;
+    var position = 0;
+    var correct = 0;
+    var incorrect = 0;
+    var quote = quotes[getRandomInt(quotes.length)];
 
-    document.getElementById("quote").innerHTML = quote.split("")
-        .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
-        .join("");
-    document.getElementById("timer").innerHTML = timer.toString();
+    quote = quotes[getRandomInt(quotes.length)];
+        document.getElementById("quote").innerHTML = quote.split("")
+            .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
+            .join("");
+        document.getElementById("timer").innerHTML = timer.toString();
 
     document.addEventListener("keydown", handleKeydown);
 
@@ -154,13 +198,7 @@
 
     function endTest() {
         calculateResults();
-
-        document.getElementById("timer").style.visibility = "hidden";
-        document.getElementById("wpm").style.visibility = "visible";
-        document.getElementById("accuracy").style.visibility = "visible";
-        document.getElementById("type").style.visibility = "visible";
-        document.getElementById("quote").style.visibility = "hidden";
-        document.getElementById("cursorVisibility").style.display = "none";
+        document.getElementById("stats").style.display = "block";
     }
 
     function calculateResults() {
@@ -172,6 +210,20 @@
         document.getElementById("accuracy").innerHTML = "Accuracy: " + accuracy.toFixed(0) + "%";
         // document.getElementById("moreaccuracy").innerHTML = "Accuracy: " + accuracy.toFixed(2) + "% (" + correct + " correct / " + incorrect + " incorrect)";
         document.getElementById("type").innerHTML = "Test Type: " + type;
+    }
+
+    function newGame() {        
+        timer = 30;
+        seconds = timer/60;
+        position = 0;
+        correct = 0;
+        incorrect = 0;
+
+        quote = quotes[getRandomInt(quotes.length)];
+        document.getElementById("quote").innerHTML = quote.split("")
+            .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
+            .join("");
+        document.getElementById("timer").innerHTML = timer.toString();
     }
 </script>
 </html>
