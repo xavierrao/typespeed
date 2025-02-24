@@ -1,3 +1,20 @@
+const options = document.getElementById("mode-options");
+const time_button = document.getElementById("mode-time");
+const words_button = document.getElementById("mode-words");
+const quotes_button = document.getElementById("mode-quotes");
+
+time_button.addEventListener("click", function() {
+    options.innerHTML = "<li><button>15</button></li><li><button>30</button></li><li><button>60</button></li>";
+})
+
+words_button.addEventListener("click", function() {
+    options.innerHTML = "<li><button>10</button></li><li><button>25</button></li><li><button>50</button></li>";
+})
+
+quotes_button.addEventListener("click", function() {
+    options.innerHTML = "<li><button>Short</button></li><li><button>Medium</button></li><li><button>Long</button></li>";
+})
+
 var timer = 30;
 var seconds = timer / 60;
 var position = 0;

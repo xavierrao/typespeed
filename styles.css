@@ -2,7 +2,46 @@ body {
     background-color: #4F7F7F;
 }
 
-.notFooter {
+header {
+    color: #C4D3CC;
+    margin-left: 20%;
+}
+
+nav {
+    width: 100%;
+    position: relative;
+    z-index: 99;
+}
+
+nav .modes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+nav .modes #mode-selection, #mode-options {
+    display: flex;
+}
+
+nav .modes #mode-selection li, #mode-options li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0 1rem;
+}
+
+nav .modes #mode-selection li button, #mode-options li button {
+    background-color: transparent;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    border: none;
+}
+
+.body {
     color: #C4D3CC;
     font-family: 'Open Sans';
     font-size: 1.4rem;
