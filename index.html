@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/cd91d3b6d2.js" crossorigin="anonymous"></script>
     <title>TypeSpeedrun</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+
+<body onload="moveCursor(0)">
     <header>
         <h1>
             TypeSpeedrun
         </h1>
     </header>
-    <nav>
-        <div class="modes">
-            <ul id="mode-selection">
-                <li>
-                    <button id="mode-time">Time</button>
-                </li>
-                <li>
-                    <button id="mode-words">Words</button>
-                </li>
-                <li>
-                    <button id="mode-quotes">Quotes</button>
-                </li>
-            </ul>
-            <ul id="mode-options">
-                <li>
-                    <button>15</button>
-                </li>
-                <li>
-                    <button>30</button>
-                </li>
-                <li>
-                    <button>60</button>
-                </li>
-            </ul>
+    <div class="mode-bar">
+        <button class="mode-button" data-mode="time" onclick="selectMode('time')">Time</button>
+        <button class="mode-button" data-mode="words" onclick="selectMode('words')">Words</button>
+        <button class="mode-button" data-mode="quotes" onclick="selectMode('quotes')">Quotes</button>
+
+        <div class="separator"></div>
+
+        <div id="time-options" class="options">
+            <button data-time="15" onclick="selectTime(15)">15</button>
+            <button data-time="30" onclick="selectTime(30)">30</button>
+            <button data-time="60" onclick="selectTime(60)">60</button>
         </div>
-    </nav>
+
+        <div id="words-options" class="options">
+            <button data-words="10" onclick="selectWords(10)">10</button>
+            <button data-words="25" onclick="selectWords(25)">25</button>
+            <button data-words="50" onclick="selectWords(50)">50</button>
+        </div>
+
+        <div id="quotes-options" class="options">
+            <button data-quote="short" onclick="selectQuote('short')">Short</button>
+            <button data-quote="medium" onclick="selectQuote('medium')">Medium</button>
+            <button data-quote="long" onclick="selectQuote('long')">Long</button>
+        </div>
+    </div>
     <div class="body">
         <h2>
+            <!-- Update so that for words and quotes, it shows currentWordNum/TotalWordNum instead of time -->
             <div id="timer"></div>
         </h2>
         <p>
             <span id="cursorVisibility" class="cursor">
-            <div id="quote"></div>
+                <div id="quote"></div>
         </p>
         <div id="stats" class="stats">
             <div class="stat-content">
@@ -59,11 +61,15 @@
             </div>
         </div>
     </div>
-    <script src="typing.js"></script>
+
+    <script src="js/modebar.js"></script>
+    <script src="js/typing.js"></script>
+
 </body>
 <footer>
     <a href="https://github.com/xavierrao/typespeed" target=”_blank”><i class="fa fa-github"></i> github</a>
     &nbsp;
-    <a href="https://www.xavierrao.com" target=”_blank”><i class="fas fa-pen"></i> Personal blog</a>
+    <a href="https://www.xavierrao.com" target=”_blank”><i class="fas fa-pen"></i> Personal Portfolio</a>
 </footer>
+
 </html>
