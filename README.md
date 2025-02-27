@@ -1,9 +1,8 @@
 # TypeSpeedrun
 
-![Website](img/website.png)
-
 ## Disclaimer: This project is still a work in progress. While the core features are functional, there may be bugs or unfinished elements. Future updates and improvements are planned.
 
+![Website](img/website.png)
 TypeSpeedrun is an interactive typing game that challenges users to improve their typing speed and accuracy. Choose between different modes, such as timed tests, word counts, or quotes of varying lengths. Track your words per minute (WPM) and accuracy as you type!
 
 ## Features
