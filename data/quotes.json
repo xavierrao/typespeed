@@ -9,67 +9,67 @@
         "id": 2,
         "text": "It always seems impossible until it's done.",
         "source": "Nelson Mandela",
-        "length": 55
+        "length": 43
     },
     {
         "id": 3,
         "text": "Keep your face always toward the sunshine—and shadows will fall behind you.",
         "source": "Walt Whitman",
-        "length": 85
+        "length": 75
     },
     {
         "id": 4,
         "text": "To live is the rarest thing in the world. Most people exist, that is all.",
         "source": "Oscar Wilde",
-        "length": 93
+        "length": 73
     },
     {
         "id": 5,
         "text": "Do what you can, with what you have, where you are.",
         "source": "Theodore Roosevelt",
-        "length": 66
+        "length": 51
     },
     {
         "id": 6,
         "text": "It is never too late to be what you might have been.",
         "source": "George Eliot",
-        "length": 70
+        "length": 52
     },
     {
         "id": 7,
         "text": "You miss 100% of the shots you don't take.",
         "source": "Wayne Gretzky",
-        "length": 52
+        "length": 42
     },
     {
         "id": 8,
         "text": "Success is not the key to happiness. Happiness is the key to success.",
         "source": "Albert Schweitzer",
-        "length": 84
+        "length": 69
     },
     {
         "id": 9,
         "text": "The only impossible journey is the one you never begin.",
         "source": "Tony Robbins",
-        "length": 71
+        "length": 55
     },
     {
         "id": 10,
         "text": "You must be the change you wish to see in the world.",
         "source": "Mahatma Gandhi",
-        "length": 70
+        "length": 52
     },
     {
         "id": 11,
         "text": "I am vengeance, I am the night, I am Batman!",
         "source": "Batman, DC",
-        "length": 49
+        "length": 44
     },
     {
         "id": 12,
         "text": "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
         "source": "Aristotle",
-        "length": 92
+        "length": 75
     },
     {
         "id": 13,
@@ -81,85 +81,85 @@
         "id": 14,
         "text": "To be great is to be misunderstood.",
         "source": "Ralph Waldo Emerson",
-        "length": 44
+        "length": 35
     },
     {
         "id": 15,
         "text": "It is not length of life, but depth of life.",
         "source": "Ralph Waldo Emerson",
-        "length": 56
+        "length": 44
     },
     {
         "id": 16,
         "text": "Life isn’t about waiting for the storm to pass, it’s about learning to dance in the rain.",
         "source": "Vivian Greene",
-        "length": 84
+        "length": 89
     },
     {
         "id": 17,
         "text": "The only limit to our realization of tomorrow is our doubts of today.",
         "source": "Franklin D. Roosevelt",
-        "length": 82
+        "length": 69
     },
     {
         "id": 18,
         "text": "Life is 10% what happens to us and 90% how we react to it.",
         "source": "Charles R. Swindoll",
-        "length": 73
+        "length": 58
     },
     {
         "id": 19,
         "text": "The mind is everything. What you think you become.",
         "source": "Buddha",
-        "length": 57
+        "length": 50
     },
     {
         "id": 20,
         "text": "The way to get started is to quit talking and begin doing.",
         "source": "Walt Disney",
-        "length": 72
+        "length": 58
     },
     {
         "id": 21,
         "text": "You only live once, but if you do it right, once is enough.",
         "source": "Mae West",
-        "length": 74
+        "length": 59
     },
     {
         "id": 22,
         "text": "In the middle of every difficulty lies opportunity.",
         "source": "Albert Einstein",
-        "length": 74
+        "length": 51
     },
     {
         "id": 23,
         "text": "Everything you can imagine is real.",
         "source": "Pablo Picasso",
-        "length": 51
+        "length": 35
     },
     {
         "id": 24,
         "text": "The best revenge is massive success.",
         "source": "Frank Sinatra",
-        "length": 52
+        "length": 36
     },
     {
         "id": 25,
         "text": "Life is short, and it is up to you to make it sweet.",
         "source": "Sarah Louise Delany",
-        "length": 65
+        "length": 52
     },
     {
         "id": 26,
         "text": "You can never cross the ocean until you have the courage to lose sight of the shore.",
         "source": "Christopher Columbus",
-        "length": 97
+        "length": 84
     },
     {
         "id": 27,
         "text": "The best way to find yourself is to lose yourself in the service of others.",
         "source": "Mahatma Gandhi",
-        "length": 84
+        "length": 75
     },
     {
         "id": 28,
@@ -171,7 +171,7 @@
         "id": 29,
         "text": "The only thing we have to fear is fear itself.",
         "source": "Franklin D. Roosevelt",
-        "length": 49
+        "length": 46
     },
     {
         "id": 30,
@@ -183,55 +183,55 @@
         "id": 31,
         "text": "Success usually comes to those who are too busy to be looking for it.",
         "source": "Henry David Thoreau",
-        "length": 80
+        "length": 69
     },
     {
         "id": 32,
         "text": "Don't watch the clock; do what it does. Keep going.",
         "source": "Sam Levenson",
-        "length": 74
+        "length": 51
     },
     {
         "id": 33,
         "text": "The future belongs to those who believe in the beauty of their dreams.",
         "source": "Eleanor Roosevelt",
-        "length": 85
+        "length": 70
     },
     {
         "id": 34,
         "text": "Believe you can and you're halfway there.",
         "source": "Theodore Roosevelt",
-        "length": 47
+        "length": 41
     },
     {
         "id": 35,
         "text": "The only thing standing between you and your goal is the story you keep telling yourself.",
         "source": "Jordan Belfort",
-        "length": 92
+        "length": 89
     },
     {
         "id": 36,
         "text": "Strive not to be a success, but rather to be of value.",
         "source": "Albert Einstein",
-        "length": 70
+        "length": 54
     },
     {
         "id": 37,
         "text": "Success is not how high you have climbed, but how you make a positive difference to the world.",
         "source": "Roy T. Bennett",
-        "length": 95
+        "length": 94
     },
     {
         "id": 38,
         "text": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
         "source": "Ralph Waldo Emerson",
-        "length": 92
+        "length": 93
     },
     {
         "id": 39,
         "text": "The only way to have a friend is to be one.",
         "source": "Ralph Waldo Emerson",
-        "length": 60
+        "length": 43
     },
     {
         "id": 40,
@@ -243,7 +243,7 @@
         "id": 41,
         "text": "Nothing is impossible, the word itself says 'I'm possible!'",
         "source": "Audrey Hepburn",
-        "length": 74
+        "length": 59
     },
     {
         "id": 42,
@@ -255,7 +255,7 @@
         "id": 43,
         "text": "A man’s destiny is shaped by his choices, not by fate.",
         "source": "Thors, Vinland Saga",
-        "length": 77
+        "length": 54
     },
     {
         "id": 44,
@@ -273,31 +273,31 @@
         "id": 46,
         "text": "What doesn't kill us makes us stronger.",
         "source": "Friedrich Nietzsche",
-        "length": 45
+        "length": 39
     },
     {
         "id": 47,
         "text": "When you have a dream, you've got to grab it and never let go.",
         "source": "Carol Burnett",
-        "length": 74
+        "length": 62
     },
     {
         "id": 48,
         "text": "You can’t always choose your way in life, but you can choose how to deal with it.",
         "source": "Asuna, Sword Art Online",
-        "length": 89
+        "length": 81
     },
     {
         "id": 49,
         "text": "I have not failed. I've just found 10,000 ways that won't work.",
         "source": "Thomas Edison",
-        "length": 74
+        "length": 63
     },
     {
         "id": 50,
         "text": "If you want to lift yourself up, lift up someone else.",
         "source": "Booker T. Washington",
-        "length": 74
+        "length": 54
     },
     {
         "id": 51,
@@ -309,49 +309,49 @@
         "id": 52,
         "text": "Do not wait to strike till the iron is hot, but make it hot by striking.",
         "source": "William Butler Yeats",
-        "length": 79
+        "length": 72
     },
     {
         "id": 53,
         "text": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
         "source": "Winston Churchill",
-        "length": 97
+        "length": 86
     },
     {
         "id": 54,
         "text": "Don't cry because it's over, smile because it happened.",
         "source": "Dr. Seuss",
-        "length": 60
+        "length": 55
     },
     {
         "id": 55,
         "text": "The key to cooking is love. You have to pour your soul into every dish.",
         "source": "Soma Yukihira, Food Wars!",
-        "length": 84
+        "length": 71
     },
     {
         "id": 56,
         "text": "When one door of happiness closes, another opens.",
         "source": "Helen Keller",
-        "length": 74
+        "length": 49
     },
     {
         "id": 57,
         "text": "You have to be odd to be number one.",
         "source": "Dr. Seuss",
-        "length": 39
+        "length": 36
     },
     {
         "id": 58,
         "text": "There are no shortcuts to any place worth going.",
         "source": "Beverly Sills",
-        "length": 63
+        "length": 48
     },
     {
         "id": 59,
         "text": "It does not matter how slowly you go as long as you do not stop.",
         "source": "Confucius",
-        "length": 76
+        "length": 64
     },
     {
         "id": 60,
@@ -362,8 +362,8 @@
     {
         "id": 61,
         "text": "I'm not going to kill you, I’m just going to make you wish you were dead. That’s my promise.",
-    "source": "The Dark Knight",
-    "length": 95
+        "source": "The Dark Knight",
+        "length": 95
     },
     {
         "id": 62,
@@ -373,664 +373,669 @@
     },
     {
         "id": 63,
-        "text": "I am Iron Man.",
-        "source": "Tony Stark, Marvel",
-        "length": 16
+        "text": "There is a 0.02 percent chance of you getting this. Congrats!",
+        "source": "Field of Dreams",
+        "length": 61
     },
     {
         "id": 64,
         "text": "If you believe in yourself and the people around you, great things can happen.",
         "source": "Ted Lasso, Ted Lasso",
-        "length": 89
+        "length": 78
     },
     {
         "id": 65,
         "text": "Be yourself; everyone else is already taken.",
         "source": "Oscar Wilde",
-        "length": 53
+        "length": 44
     },
     {
         "id": 66,
         "text": "Life is really simple, but we insist on making it complicated.",
         "source": "Confucius",
-        "length": 77
+        "length": 62
     },
     {
         "id": 67,
         "text": "Happiness depends upon ourselves.",
         "source": "Aristotle",
-        "length": 42
+        "length": 33
     },
     {
         "id": 68,
         "text": "The hardest part of life is accepting that you cannot change the past.",
         "source": "Thorfinn, Vinland Saga",
-        "length": 85
+        "length": 70
     },
     {
         "id": 69,
         "text": "In the end, we will remember not the words of our enemies, but the silence of our friends.",
         "source": "Martin Luther King Jr.",
-        "length": 94
+        "length": 90
     },
     {
         "id": 70,
         "text": "I am the hope of the universe. I am the answer to all living things that cry out for peace.",
         "source": "Goku, Dragon Ball Z",
-        "length": 94
+        "length": 91
     },
     {
         "id": 71,
         "text": "The greatest trick the Devil ever pulled was convincing the world he didn’t exist.",
-    "source": "The Usual Suspects",
-    "length": 94
+        "source": "The Usual Suspects",
+        "length": 82
     },
     {
         "id": 72,
         "text": "Life is what happens when you're busy making other plans.",
         "source": "John Lennon",
-        "length": 68
+        "length": 57
     },
     {
         "id": 73,
         "text": "The journey of a thousand miles begins with one step.",
         "source": "Lao Tzu",
-        "length": 65
+        "length": 53
     },
     {
         "id": 74,
         "text": "Do I feel lucky? Well, do you, punk? The question that decides whether you live or die.",
-    "source": "Dirty Harry",
-    "length": 95
+        "source": "Dirty Harry",
+        "length": 87
     },
     {
         "id": 75,
         "text": "You know what the happiest animal on Earth is? A goldfish. It’s got a 10-second memory.",
         "source": "Ted Lasso, Ted Lasso",
-        "length": 100
+        "length": 87
     },
     {
         "id": 76,
         "text": "I wish I could quit you. But life doesn’t give you what you want. It only gives you what you need.",
-    "source": "Brokeback Mountain",
-    "length": 97
+        "source": "Brokeback Mountain",
+        "length": 98
     },
     {
         "id": 77,
         "text": "Every time you fall, it’s an opportunity to get back up even stronger.",
         "source": "Bell Cranel, DanMachi",
-        "length": 89
+        "length": 70
     },
     {
         "id": 78,
         "text": "I'm just a kid from Brooklyn.",
         "source": "Steve Rogers, Captain America, Marvel",
-        "length": 31
+        "length": 29
     },
     {
         "id": 79,
         "text": "To truly understand someone, you have to walk a mile in their shoes.",
         "source": "Mikasa Ackerman, Attack on Titan",
-        "length": 84
+        "length": 68
     },
     {
         "id": 80,
         "text": "You're the best there is at what you do, but what you do isn't very nice.",
         "source": "Wolverine, Marvel",
-        "length": 78
+        "length": 73
     },
     {
         "id": 81,
         "text": "We’re all human. I don’t want to see anyone suffer like I did.",
         "source": "Eren Yeager, Attack on Titan",
-        "length": 79
+        "length": 62
     },
     {
         "id": 82,
         "text": "The more you struggle, the more you grow. That’s how you get stronger.",
         "source": "Yuno, Black Clover",
-        "length": 83
+        "length": 70
     },
     {
         "id": 83,
         "text": "It’s not about surviving in the game. It’s about surviving in the real world.",
         "source": "Kirito, Sword Art Online",
-        "length": 84
+        "length": 77
     },
     {
         "id": 84,
         "text": "You’re either a warrior or you’re not. There’s no such thing as a half-hearted warrior.",
         "source": "Vegeta, Dragon Ball Z",
-        "length": 83
+        "length": 87
     },
     {
         "id": 85,
         "text": "The world is changing, and we need to change with it.",
         "source": "Black Panther, Marvel",
-        "length": 67
+        "length": 53
     },
     {
         "id": 86,
         "text": "There’s only one way this is going to end. You’re going to be stopped.",
         "source": "Batman, DC",
-        "length": 78
+        "length": 70
     },
     {
         "id": 87,
         "text": "The world is merciless, and it’s also very beautiful.",
         "source": "Mikasa Ackerman, Attack on Titan",
-        "length": 68
+        "length": 52
     },
     {
         "id": 88,
         "text": "A hero can be anyone, even a man doing something as simple as reassuring a child.",
         "source": "Batman, DC",
-        "length": 90
+        "length": 81
     },
     {
         "id": 89,
         "text": "Cooking isn’t just about following a recipe. It’s about passion and creativity.",
         "source": "Erina Nakiri, Food Wars!",
-        "length": 92
+        "length": 79
     },
     {
         "id": 90,
         "text": "When you give up, that's when the game is over.",
         "source": "Kagome Higurashi, Inuyasha",
-        "length": 58
+        "length": 47
     },
     {
         "id": 91,
         "text": "I am gonna be king of the pirates! I'm gonna be king of the pirates!",
         "source": "Monkey D. Luffy, One Piece",
-        "length": 74
+        "length": 68
     },
     {
         "id": 92,
         "text": "Do not go gentle into that good night. Rage, rage against the dying of the light.",
         "source": "Dylan Thomas, Do Not Go Gentle into That Good Night",
-        "length": 92
+        "length": 81
     },
     {
         "id": 93,
         "text": "The world is a cruel and unjust place, but it’s also very beautiful.",
         "source": "Orochimaru, Naruto",
-        "length": 79
+        "length": 68
     },
     {
         "id": 94,
-        "text": "May the Force be with you.",
-        "source": "Star Wars",
-        "length": 28
+        "text": "That’s what I do: I drink, and I know things. It’s not just a hobby; it’s a lifestyle.",
+        "source": "Game of Thrones",
+        "length": 86
     },
     {
         "id": 95,
         "text": "It’s not the face that makes someone a monster; it’s the choices they make with their lives.",
         "source": "Naruto Uzumaki, Naruto",
-        "length": 85
+        "length": 92
     },
     {
         "id": 96,
         "text": "The only limit to your impact is your imagination and commitment.",
         "source": "Tony Stark, Iron Man",
-        "length": 83
+        "length": 65
     },
     {
         "id": 97,
         "text": "When you give up, that’s when the game is over.",
         "source": "Kamina, Gurren Lagann",
-        "length": 60
+        "length": 47
     },
     {
         "id": 98,
         "text": "I would rather die than live in a world where I can't protect my friends.",
         "source": "Naruto Uzumaki, Naruto",
-        "length": 85
+        "length": 73
     },
     {
         "id": 99,
         "text": "Power comes in response to a need, not a desire. You have to create that need.",
         "source": "Goku, Dragon Ball Z",
-        "length": 88
+        "length": 78
     },
     {
         "id": 100,
         "text": "In my culture, death is not the end. It’s more of a stepping-off point.",
         "source": "Thor, Marvel",
-        "length": 78
+        "length": 71
     },
     {
         "id": 101,
         "text": "Life is not measured by the number of breaths we take, but by the moments that take our breath away.",
         "source": "George Carlin",
-        "length": 85
+        "length": 100
     },
     {
         "id": 102,
         "text": "You have to believe. Otherwise, it will never happen.",
         "source": "Naruto Uzumaki, Naruto",
-        "length": 62
+        "length": 53
     },
     {
         "id": 103,
         "text": "You can't sit around envying other people's worlds. You have to go out and change your own.",
         "source": "The Secret Garden, Frances Hodgson Burnett",
-        "length": 100
+        "length": 91
     },
     {
         "id": 104,
         "text": "In our society, letting others in is not an easy task, but it is a necessary one.",
         "source": "Naruto Uzumaki, Naruto",
-        "length": 95
+        "length": 81
     },
     {
-        "id": 105
+        "id": 105,
+        "text": "I’m not bad. I’m just drawn that way. It’s a reminder that appearances can be deceiving.",
+        "source": "Who Framed Roger Rabbit",
+        "length": 88
     },
     {
         "id": 106,
         "text": "Just because someone’s important doesn’t mean they’re right.",
         "source": "Lelouch Lamperouge, Code Geass",
-        "length": 68
+        "length": 60
     },
     {
         "id": 107,
         "text": "I never give up. I don’t stop until I get what I want.",
         "source": "Saitama, One Punch Man",
-        "length": 71
+        "length": 54
     },
     {
         "id": 108,
-        "text": "To know sorrow is not terrifying. What is terrifying is to know you can’t go back to happiness you could have.",
-        "source": "Matsumoto Rangiku, Bleach",
-        "length": 98
+        "text": "The ones who are crazy enough to think they can change the world, are the ones who do.",
+        "source": "Steins;Gate",
+        "length": 86
     },
     {
         "id": 109,
         "text": "In the end, we only regret the chances we didn’t take.",
         "source": "Lewis Carroll",
-        "length": 75
+        "length": 54
     },
     {
         "id": 110,
         "text": "No one is born with a purpose, you make your purpose!",
         "source": "Hinata Hyuga, Naruto",
-        "length": 68
+        "length": 53
     },
     {
         "id": 111,
         "text": "We are all human. You can be a hero, too, no matter what you have inside you.",
         "source": "Cyborg, DC",
-        "length": 84
+        "length": 77
     },
     {
         "id": 112,
         "text": "The force will be with you. Always.",
         "source": "Star Wars",
-        "length": 44
+        "length": 35
     },
     {
         "id": 113,
         "text": "May the odds be ever in your favor.",
         "source": "The Hunger Games, Suzanne Collins",
-        "length": 51
+        "length": 35
     },
     {
         "id": 114,
         "text": "I don’t know what I’m supposed to be. I’m not a hero, and I’m not a villain.",
         "source": "Venom, Marvel",
-        "length": 83
+        "length": 76
     },
     {
         "id": 115,
         "text": "You don’t have to be perfect to be a great player. You just have to be passionate.",
         "source": "Asahi Azumane, Haikyuu!!",
-        "length": 95
+        "length": 82
     },
     {
         "id": 116,
         "text": "The world is not a wish-granting factory.",
         "source": "The Fault in Our Stars, John Green",
-        "length": 58
+        "length": 41
     },
     {
         "id": 117,
         "text": "The problem is not the problem. The problem is your attitude about the problem.",
         "source": "Pirates of the Caribbean",
-        "length": 89
+        "length": 79
     },
     {
         "id": 118,
         "text": "It's not the face that makes someone a monster; it's the choices they make with their lives.",
         "source": "Naruto Uzumaki, Naruto",
-        "length": 97
+        "length": 92
     },
     {
         "id": 119,
         "text": "A friend to all is a friend to none.",
         "source": "Aristotle",
-        "length": 44
+        "length": 36
     },
     {
         "id": 120,
         "text": "The true sign of intelligence is not knowledge but imagination.",
         "source": "Albert Einstein",
-        "length": 76
+        "length": 63
     },
     {
         "id": 121,
         "text": "What are you going to do? Blow me away? I’ll show you how tough I am.",
         "source": "The Punisher, Marvel",
-        "length": 89
+        "length": 69
     },
     {
         "id": 122,
         "text": "People’s lives don’t end when they die, it ends when they lose faith.",
         "source": "Naruto Uzumaki, Naruto",
-        "length": 80
+        "length": 69
     },
     {
         "id": 123,
         "text": "It’s not who I am underneath, but what I do that defines me.",
         "source": "Batman Begins",
-        "length": 74
+        "length": 60
     },
     {
         "id": 124,
         "text": "The truth is like a lion; you don’t have to defend it. Let it loose, it will defend itself.",
         "source": "The Chronicles of Narnia, C.S. Lewis",
-        "length": 92
+        "length": 91
     },
     {
         "id": 125,
         "text": "What you do makes a difference, and you have to decide what kind of difference you want to make.",
         "source": "The Help, Kathryn Stockett",
-        "length": 97
+        "length": 96
     },
     {
         "id": 126,
         "text": "Sometimes you have to be a little bit crazy to change the world.",
         "source": "Dr. Seuss",
-        "length": 71
+        "length": 64
     },
     {
         "id": 127,
         "text": "Hope is a good thing, maybe the best of things, and no good thing ever dies.",
         "source": "Shawshank Redemption",
-        "length": 85
+        "length": 76
     },
     {
         "id": 128,
         "text": "To the well-organized mind, death is but the next great adventure.",
         "source": "Harry Potter and the Philosopher's Stone, J.K. Rowling",
-        "length": 95
+        "length": 66
     },
     {
         "id": 129,
         "text": "I’ve always known that nothing in this world is free. Every choice comes with a price.",
         "source": "Levi Ackerman, Attack on Titan",
-        "length": 94
+        "length": 86
     },
     {
         "id": 130,
         "text": "A true chef creates something that stirs emotion in the hearts of the people.",
         "source": "Erina Nakiri, Food Wars!",
-        "length": 94
+        "length": 77
     },
     {
         "id": 131,
         "text": "We are all in the gutter, but some of us are looking at the stars.",
         "source": "Oscar Wilde",
-        "length": 73
+        "length": 66
     },
     {
         "id": 132,
         "text": "A person grows up when he's able to overcome hardships.",
         "source": "Saitama, One Punch Man",
-        "length": 65
+        "length": 55
     },
     {
         "id": 133,
         "text": "You can’t win if you don’t take the risk.",
         "source": "Tobio Kageyama, Haikyuu!!",
-        "length": 60
+        "length": 41
     },
     {
         "id": 134,
         "text": "Sometimes the best way to learn is to experience the pain.",
         "source": "Harry Potter and the Half-Blood Prince, J.K. Rowling",
-        "length": 85
+        "length": 58
     },
     {
         "id": 135,
         "text": "The stronger the hate, the stronger the power that gives you life.",
         "source": "Loki, Marvel",
-        "length": 79
+        "length": 66
     },
     {
         "id": 136,
         "text": "I am Groot. Simple, but there’s a lot of meaning packed into three words. A message of loyalty.",
         "source": "Guardians of the Galaxy",
-        "length": 99
+        "length": 95
     },
     {
         "id": 137,
         "text": "The man who has no imagination has no wings.",
         "source": "Muhammad Ali",
-        "length": 64
+        "length": 44
     },
     {
         "id": 138,
         "text": "We cannot solve our problems with the same thinking we used when we created them.",
         "source": "Albert Einstein",
-        "length": 84
+        "length": 81
     },
     {
         "id": 139,
         "text": "You have to do the things you think you cannot do.",
         "source": "Eleanor Roosevelt",
-        "length": 62
+        "length": 50
     },
     {
         "id": 140,
         "text": "It’s not about being the strongest, it’s about protecting the people you care about.",
         "source": "Goku, Dragon Ball Z",
-        "length": 92
+        "length": 84
     },
     {
         "id": 141,
         "text": "There is no greater agony than bearing an untold story inside you.",
         "source": "Maya Angelou",
-        "length": 74
+        "length": 66
     },
     {
         "id": 142,
         "text": "No matter how hard you try, you can’t make everyone happy.",
         "source": "Hinata Hyuga, Naruto",
-        "length": 76
+        "length": 58
     },
     {
         "id": 143,
         "text": "Do or do not, there is no try.",
         "source": "Yoda, Star Wars",
-        "length": 36
+        "length": 30
     },
     {
         "id": 144,
         "text": "It’s what’s on the inside that counts.",
         "source": "The Princess Diaries",
-        "length": 53
+        "length": 38
     },
     {
         "id": 145,
         "text": "It’s not about giving up, it’s about knowing when you’ve done all you can.",
         "source": "Erwin Smith, Attack on Titan",
-        "length": 83
+        "length": 74
     },
     {
         "id": 146,
         "text": "I'm not just some guy in a suit. I'm the man who’s going to save you all.",
         "source": "Iron Man, Marvel",
-        "length": 84
+        "length": 73
     },
     {
         "id": 147,
         "text": "Heroes are made by the paths they choose, not the powers they are graced with.",
         "source": "Iron Man, Marvel",
-        "length": 82
+        "length": 78
     },
     {
         "id": 148,
         "text": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
         "source": "Nelson Mandela",
-        "length": 98
+        "length": 89
     },
     {
         "id": 149,
         "text": "There is no such thing as an easy life. Every decision you make has its consequences.",
         "source": "Askeladd, Vinland Saga",
-        "length": 98
+        "length": 85
     },
     {
         "id": 150,
         "text": "I’m not afraid of dying. I’m afraid of not trying.",
         "source": "Jay-Z",
-        "length": 63
+        "length": 50
     },
     {
         "id": 151,
         "text": "The hardest part about this job is knowing when to walk away.",
         "source": "The Flash, DC",
-        "length": 74
+        "length": 61
     },
     {
         "id": 152,
         "text": "With great power comes great responsibility.",
         "source": "Uncle Ben, Spider-Man",
-        "length": 56
+        "length": 44
     },
     {
-        "id": 153
-        
+        "id": 153,
+        "text": "If you don’t take risks, you can’t create a future.",
+        "source": "Steins;Gate",
+        "length": 51
     },
     {
         "id": 154,
         "text": "If you want to go fast, go alone. If you want to go far, go together.",
         "source": "African Proverb",
-        "length": 72
+        "length": 69
     },
     {
         "id": 155,
         "text": "Justice is about harmony, not punishment.",
         "source": "Superman, DC",
-        "length": 63
+        "length": 41
     },
     {
         "id": 156,
         "text": "The real power in the world is the ability to change.",
         "source": "Magneto, Marvel",
-        "length": 67
+        "length": 53
     },
     {
         "id": 157,
         "text": "It’s not the armor that makes the man. It’s the man that makes the armor.",
         "source": "Tony Stark, Marvel",
-        "length": 74
+        "length": 73
     },
     {
         "id": 158,
         "text": "Everything has beauty, but not everyone can see it.",
         "source": "Confucius",
-        "length": 60
+        "length": 51
     },
     {
         "id": 159,
         "text": "All our dreams can come true, if we have the courage to pursue them.",
         "source": "Walt Disney",
-        "length": 80
+        "length": 68
     },
     {
         "id": 160,
         "text": "Those who don’t stand up for themselves will be trampled on.",
         "source": "Yami Sukehiro, Black Clover",
-        "length": 79
+        "length": 60
     },
     {
         "id": 161,
         "text": "I don’t seek revenge. I seek to end the cycle of violence.",
         "source": "Thorfinn, Vinland Saga",
-        "length": 84
+        "length": 58
     },
     {
         "id": 162,
         "text": "It’s not what happens to you, but how you react to it that matters.",
         "source": "Epictetus",
-        "length": 75
+        "length": 67
     },
     {
         "id": 163,
         "text": "Life is like a box of chocolates. You never know what you're gonna get.",
         "source": "Forrest Gump",
-        "length": 74
+        "length": 71
     },
     {
         "id": 164,
         "text": "The best time to plant a tree was 20 years ago. The second best time is now.",
         "source": "Chinese Proverb",
-        "length": 78
+        "length": 76
     },
     {
         "id": 165,
         "text": "May the Force be with you, always. That’s the essence of what the Jedi fight for.",
         "source": "Star Wars",
-        "length": 80
+        "length": 81
     },
     {
         "id": 166,
         "text": "The only thing that can defeat power is more power.",
         "source": "Frieza, Dragon Ball Z",
-        "length": 66
+        "length": 51
     },
     {
         "id": 167,
         "text": "The only thing we’re allowed to do is believe that we won’t regret the choice we made.",
         "source": "Armin Arlert, Attack on Titan",
-        "length": 92
+        "length": 86
     },
     {
         "id": 168,
         "text": "Food has the power to change people. It’s what brings people together.",
         "source": "Soma Yukihira, Food Wars!",
-        "length": 84
+        "length": 70
     },
     {
         "id": 169,
         "text": "Our lives begin to end the day we become silent about things that matter.",
         "source": "Martin Luther King Jr.",
-        "length": 94
+        "length": 73
     },
     {
         "id": 170,
         "text": "Nothing in the world can take the place of Persistence.",
         "source": "Calvin Coolidge",
-        "length": 76
+        "length": 55
     },
     {
         "id": 171,
         "text": "I’ll be back. I always come back. You know why? Because I'm unstoppable, just like the future.",
         "source": "The Terminator",
-        "length": 97
+        "length": 94
     },
     {
         "id": 172,
         "text": "You either die a hero, or you live long enough to see yourself become the villain.",
         "source": "The Dark Knight",
-        "length": 83
+        "length": 82
     },
     {
         "id": 173,
         "text": "You have the power to control your destiny. Don’t let anyone tell you otherwise.",
         "source": "The Pursuit of Happyness",
-        "length": 92
+        "length": 80
     },
     {
         "id": 174,
@@ -1048,61 +1053,61 @@
         "id": 176,
         "text": "Our birthdays are feathers in the broad wing of time.",
         "source": "Jean Paul",
-        "length": 74
+        "length": 53
     },
     {
         "id": 177,
         "text": "Don't judge a book by its movie.",
         "source": "C.J. Langenhoven",
-        "length": 48
+        "length": 32
     },
     {
         "id": 178,
         "text": "For it is in giving that we receive.",
         "source": "Francis of Assisi",
-        "length": 47
+        "length": 36
     },
     {
         "id": 179,
         "text": "He who has a why to live can bear almost any how.",
         "source": "Friedrich Nietzsche",
-        "length": 75
+        "length": 49
     },
     {
         "id": 180,
         "text": "Be curious, not judgmental.",
         "source": "Ted Lasso, Ted Lasso",
-        "length": 31
+        "length": 27
     },
     {
         "id": 181,
         "text": "I am your father, Luke. The truth about your lineage is more complex than you could ever imagine.",
         "source": "Star Wars: The Empire Strikes Back",
-        "length": 98
+        "length": 97
     },
     {
         "id": 182,
         "text": "It’s not about being fearless. It’s about taking action despite your fears.",
         "source": "Shuri, Black Panther",
-        "length": 84
+        "length": 75
     },
     {
         "id": 183,
         "text": "I can do this all day.",
         "source": "Captain America, Captain America: The First Avenger",
-        "length": 38
+        "length": 22
     },
     {
         "id": 184,
         "text": "Get busy living, or get busy dying.",
         "source": "The Shawshank Redemption",
-        "length": 59
+        "length": 35
     },
     {
         "id": 185,
         "text": "Why so serious? If you're not laughing, you're not truly living. Life's too short for that.",
         "source": "The Dark Knight",
-        "length": 90
+        "length": 91
     },
     {
         "id": 186,
@@ -1112,33 +1117,33 @@
     },
     {
         "id": 187,
-        "text": "It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.",
-        "source": "Charles Darwin",
-        "length": 97
+        "text": "I believe that people can change, even if they don’t believe it themselves.",
+        "source": "Mob Psycho 100",
+        "length": 75
     },
     {
         "id": 188,
         "text": "You had me at hello. It wasn’t just words. It was everything I needed to hear to change my life.",
         "source": "Jerry Maguire",
-        "length": 93
+        "length": 96
     },
     {
         "id": 189,
         "text": "To infinity and beyond! There's no limit to how far we can go if we believe in each other.",
         "source": "Toy Story",
-        "length": 91
+        "length": 90
     },
     {
         "id": 190,
         "text": "Nobody puts Baby in a corner. She deserves the spotlight, the stage, and the world’s attention.",
         "source": "Dirty Dancing",
-        "length": 97
+        "length": 95
     },
     {
         "id": 191,
         "text": "We can only live in the present. What happened in the past is gone.",
         "source": "Asuna, Sword Art Online",
-        "length": 84
+        "length": 67
     },
     {
         "id": 192,
@@ -1150,163 +1155,163 @@
         "id": 193,
         "text": "There are two ways of spreading light: to be the candle or the mirror that reflects it.",
         "source": "Edith Wharton",
-        "length": 84
+        "length": 87
     },
     {
         "id": 194,
         "text": "The greatest wealth is to live content with little.",
         "source": "Plato",
-        "length": 70
+        "length": 51
     },
     {
         "id": 195,
         "text": "You can't stop the signal, Mal. Not now, not ever. We keep flying no matter what they say.",
         "source": "Serenity",
-        "length": 92
+        "length": 90
     },
     {
         "id": 196,
         "text": "I’ll make him an offer he can’t refuse. It's the kind of offer that’s impossible to walk away from.",
         "source": "The Godfather",
-        "length": 97
+        "length": 99
     },
     {
         "id": 197,
         "text": "Do what you love and you’ll never work a day in your life.",
         "source": "Confucius",
-        "length": 64
+        "length": 58
     },
     {
         "id": 198,
         "text": "If you don’t take risks, you can’t create a future.",
         "source": "Monkey D. Luffy, One Piece",
-        "length": 61
+        "length": 51
     },
     {
         "id": 199,
         "text": "Nothing will work unless you do.",
         "source": "Maya Angelou",
-        "length": 52
+        "length": 32
     },
     {
         "id": 200,
         "text": "Don’t be afraid to fail. If you fall, stand back up. That’s how you learn.",
         "source": "Yami Sukehiro, Black Clover",
-        "length": 89
+        "length": 74
     },
     {
         "id": 201,
         "text": "You should enjoy the little detours. Sometimes they take you to the best places.",
         "source": "Ino Yamanaka, Naruto",
-        "length": 88
+        "length": 80
     },
     {
         "id": 202,
         "text": "The world is not in your books and maps. It’s out there.",
         "source": "Gandalf, The Hobbit",
-        "length": 72
+        "length": 56
     },
     {
         "id": 203,
         "text": "Even the darkest night will end and the sun will rise.",
         "source": "Les Misérables, Victor Hugo",
-        "length": 82
+        "length": 54
     },
     {
         "id": 204,
         "text": "I don’t want to fight, but I will do what I must to protect my friends.",
         "source": "Rimuru Tempest, Tensura",
-        "length": 85
+        "length": 71
     },
     {
         "id": 205,
         "text": "Time is a great teacher, but unfortunately it kills all its pupils.",
         "source": "Louis Hector Berlioz",
-        "length": 76
+        "length": 67
     },
     {
         "id": 206,
         "text": "You were the chosen one! We had a plan, we had hope, and now it’s all gone because of you.",
         "source": "Star Wars: Episode III – Revenge of the Sith",
-        "length": 97
+        "length": 90
     },
     {
         "id": 207,
         "text": "I drink your milkshake! I drink it all. It’s the kind of power that will overwhelm you completely.",
         "source": "There Will Be Blood",
-        "length": 93
+        "length": 98
     },
     {
         "id": 208,
         "text": "I'm king of the world! It's a feeling of freedom and excitement, knowing that nothing can stop you.",
         "source": "Titanic",
-        "length": 94
+        "length": 99
     },
     {
         "id": 209,
         "text": "Every man dies, not every man really lives. Life’s all about the choices we make and how we act.",
         "source": "Braveheart",
-        "length": 94
+        "length": 96
     },
     {
         "id": 210,
         "text": "Doubt kills more dreams than failure ever will.",
         "source": "Suzy Kassem",
-        "length": 64
+        "length": 47
     },
     {
         "id": 211,
         "text": "Keep the change, ya filthy animal. A phrase that’s become synonymous with holiday spirit.",
-    "source": "Home Alone",
-    "length": 92
+        "source": "Home Alone",
+        "length": 89
     },
     {
         "id": 212,
         "text": "I can’t go back to yesterday because I was a different person then.",
         "source": "Alice in Wonderland, Lewis Carroll",
-        "length": 79
+        "length": 67
     },
     {
         "id": 213,
         "text": "The most common way people give up their power is by thinking they don’t have any.",
         "source": "Alice Walker",
-        "length": 87
+        "length": 82
     },
     {
         "id": 214,
-        "text": "I think, therefore I am.",
-        "source": "René Descartes",
-        "length": 19
+        "text": "The stuff that dreams are made of. It’s what drives us, what pushes us beyond the ordinary.",
+        "source": "The Maltese Falcon",
+        "length": 91
     },
     {
         "id": 215,
         "text": "The strong are meant to be feared. The weak are meant to be protected.",
         "source": "Bell Cranel, DanMachi",
-        "length": 78
+        "length": 70
     },
     {
         "id": 216,
         "text": "Your food should speak for itself. Let it show your personality.",
         "source": "Takumi Aldini, Food Wars!",
-        "length": 77
+        "length": 64
     },
     {
         "id": 217,
         "text": "You cannot swim for new horizons until you have courage to lose sight of the shore.",
         "source": "William Faulkner",
-        "length": 91
+        "length": 83
     },
     {
         "id": 218,
         "text": "I don’t care if I’m not the chosen one. I’ll create my own path to success.",
         "source": "Asta, Black Clover",
-        "length": 90
+        "length": 75
     },
     {
         "id": 219,
         "text": "Winning doesn’t matter as much as the effort you put in.",
         "source": "Kei Tsukishima, Haikyuu!!",
-        "length": 84
+        "length": 56
     },
     {
         "id": 220,
@@ -1318,25 +1323,25 @@
         "id": 221,
         "text": "There's no place like home. A simple truth that’s held through all my travels and experiences.",
         "source": "The Wizard of Oz",
-        "length": 81
+        "length": 94
     },
     {
         "id": 222,
         "text": "The force will be with you. Always. No matter what you face, know that the Force will guide you.",
         "source": "Star Wars",
-        "length": 84
+        "length": 96
     },
     {
         "id": 223,
         "text": "I find that the harder I work, the more luck I seem to have.",
         "source": "Thomas Jefferson",
-        "length": 74
+        "length": 60
     },
     {
         "id": 224,
         "text": "Life isn’t about finding yourself. Life is about creating yourself.",
         "source": "George Bernard Shaw",
-        "length": 80
+        "length": 67
     },
     {
         "id": 225,
@@ -1348,150 +1353,150 @@
         "id": 226,
         "text": "I have no special talent. I am only passionately curious.",
         "source": "Albert Einstein",
-        "length": 70
+        "length": 57
     },
     {
         "id": 227,
-        "text": "You don’t get to decide what’s impossible. If you push hard enough, you can make the impossible real.",
-        "source": "Interstellar",
-        "length": 97
+        "text": "A person’s true worth is determined by how much he can endure.",
+        "source": "Parasyte: The Maxim",
+        "length": 62
     },
     {
         "id": 228,
         "text": "Not all those who wander are lost.",
         "source": "The Fellowship of the Ring, J.R.R. Tolkien",
-        "length": 45
+        "length": 34
     },
     {
         "id": 229,
         "text": "A person who never made a mistake never tried anything new.",
         "source": "Albert Einstein",
-        "length": 74
+        "length": 59
     },
     {
         "id": 230,
         "text": "In three words I can sum up everything I’ve learned about life: it goes on.",
         "source": "Robert Frost",
-        "length": 74
+        "length": 75
     },
     {
         "id": 231,
         "text": "I love you 3000. It’s the kind of love that lasts through time, no matter the distance or the years.",
         "source": "Avengers: Endgame",
-        "length": 93
+        "length": 100
     },
     {
         "id": 232,
         "text": "A person grows up when he’s able to overcome hardships.",
         "source": "Jiraiya, Naruto",
-        "length": 69
+        "length": 55
     },
     {
         "id": 233,
-        "text": "Just because you’re right, doesn’t mean I’m wrong. Life’s full of contradictions, but we make it work.",
-        "source": "The Godfather Part II",
-        "length": 98
+        "text": "Even if you’re at the bottom of the class, your life isn’t over. You can still go up.",
+        "source": "Assassination Classroom",
+        "length": 91
     },
     {
         "id": 234,
         "text": "Don’t let your past define your future. Move forward and change.",
         "source": "Rimuru Tempest, Tensura",
-        "length": 85
+        "length": 64
     },
     {
         "id": 235,
         "text": "I am the one who’s going to stop you.",
         "source": "Saitama, One Punch Man",
-        "length": 45
+        "length": 37
     },
     {
         "id": 236,
         "text": "If you’re going through hell, keep going.",
         "source": "Winston Churchill",
-        "length": 50
+        "length": 41
     },
     {
         "id": 237,
         "text": "If you want to live a happy life, tie it to a goal, not to people or things.",
         "source": "Albert Einstein",
-        "length": 87
+        "length": 76
     },
     {
         "id": 238,
         "text": "Not everything that is faced can be changed, but nothing can be changed until it is faced.",
         "source": "James Baldwin",
-        "length": 94
+        "length": 90
     },
     {
         "id": 239,
         "text": "The world is not perfect, but it’s there for us, trying the best it can.",
         "source": "Roy Mustang, Attack on Titan",
-        "length": 98
+        "length": 72
     },
     {
         "id": 240,
         "text": "Life is either a daring adventure or nothing at all.",
         "source": "Helen Keller",
-        "length": 68
+        "length": 52
     },
     {
         "id": 241,
         "text": "People who can't throw something important away can never hope to change anything.",
         "source": "Eren Yeager, Attack on Titan",
-        "length": 84
+        "length": 82
     },
     {
         "id": 242,
         "text": "What we achieve inwardly will change outer reality.",
         "source": "Plutarch",
-        "length": 73
+        "length": 51
     },
     {
         "id": 243,
         "text": "You can’t control what happens, but you can control how you react.",
         "source": "Asahi Azumane, Haikyuu!!",
-        "length": 90
+        "length": 66
     },
     {
         "id": 244,
         "text": "I could’ve been a contender. But life didn’t give me the chance I was fighting for all along.",
         "source": "On the Waterfront",
-        "length": 89
+        "length": 93
     },
     {
         "id": 245,
         "text": "Just keep swimming. Life is full of ups and downs, but you keep going no matter what happens.",
         "source": "Finding Nemo",
-        "length": 92
+        "length": 93
     },
     {
         "id": 246,
         "text": "A true warrior does not rely on others for strength, but on his own will.",
         "source": "Thors, Vinland Saga",
-        "length": 85
+        "length": 73
     },
     {
         "id": 247,
         "text": "A match is won by the team that can forget the score and focus on the next point.",
         "source": "Daichi Sawamura, Haikyuu!!",
-        "length": 92
+        "length": 81
     },
     {
         "id": 248,
         "text": "In this world, you only get what you work for. No more, no less.",
         "source": "Bell Cranel, DanMachi",
-        "length": 81
+        "length": 64
     },
     {
         "id": 249,
         "text": "I see dead people. Life's mysteries and uncertainties often lead to strange and eerie experiences.",
         "source": "The Sixth Sense",
-        "length": 91
+        "length": 98
     },
     {
         "id": 250,
-        "text": "It’s just a flesh wound. Even in the face of defeat, we continue on and never give up.",
-        "source": "Monty Python and the Holy Grail",
-        "length": 87
+        "text": "Sometimes, there is no answer. But that doesn’t mean you shouldn’t try to find one.",
+        "source": "Assassination Classroom",
+        "length": 83
     }
 ]
