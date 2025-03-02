@@ -1,82 +1,416 @@
-var timerRunning = false;
+var text_data = {};
+var isDataFetched = false;
+var keydownListenerAttached = false;
 
-var timer = 30;
-var seconds = timer / 60;
+var quote = "";
+var word_string = "";
+
+var timerRunning = false;
+var words = 0;
+var totalWords = 0;
+var totalCharacters = 0;
+var timer = 0;
 var position = 0;
 var correct = 0;
 var incorrect = 0;
 
-//Get 250 short, 150 medium, and 100 long quotes
-const quotes = ["The old clock on the wall ticked loudly, echoing through the empty room. Sarah sat at her desk, fingers hovering over the keyboard, searching for inspiration. Outside, raindrops pattered against the window pane, creating a soothing rhythm. She took a deep breath, closed her eyes, and began to type, letting the words flow freely from her imagination.",
-    "As the sun dipped below the horizon, painting the sky in vibrant oranges and pinks, Jack hurried along the busy street. He clutched a small package tightly, weaving through the crowd of commuters heading home. The city hummed with energy, a symphony of car horns, chatter, and footsteps on concrete. Jack checked his watch, quickening his pace.",
-    "The aroma of freshly baked bread wafted through the air, drawing customers into the small bakery. Emma kneaded dough with practiced hands, her mind wandering to the day ahead. She loved the early morning quiet, broken only by the whir of mixers and the occasional ding of the oven timer. As the first rays of sunlight streamed through the window, Emma smiled text-displayedly.",
-    "Dr. Martinez peered into the microscope, adjusting the focus carefully. The tiny organisms danced in his field of view, a microscopic ballet of life. He jotted down notes, his excitement growing with each observation. This could be the breakthrough he'd been searching for, the key to unlocking a medical mystery that had puzzled scientists for decades. He leaned back, mind racing with possibilities."];
+let t;
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+function getData() {
+    fetch('data/info.json')
+        .then(res => res.json())
+        .then(data => {
+            text_data = data;
+            isDataFetched = true;
+            if (currentMode === 'time') {
+                updateTimeData(currentOption.value);
+            }
+            else if (currentMode === 'words') {
+                updateWordData(currentOption.value);
+            }
+            else if (currentMode === 'quotes') {
+                updateQuoteData(currentOption.value);
+            }
+            moveCursor(0);
+        })
+        .catch(error => {
+            console.log(error);
+        });
 }
 
-var quote = quotes[getRandomInt(quotes.length)];
+function updateTimeData(option) {
+    const info = text_data;
+    if (!info || !info.words) {
+        return;
+    }
 
-quote = quotes[getRandomInt(quotes.length)];
-document.getElementById("quote").innerHTML = quote.split("")
-    .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
-    .join("");
-document.getElementById("timer").innerHTML = timer.toString();
+    let word_list = info.words;
+    let word_array = [];
+    for (let i = 0; i < option * 5; i++) {
+        word_array.push(word_list[getRandomInt(word_list.length)]);
+    }
 
-document.addEventListener("keydown", handleKeydown);
+    word_string = word_array.join(' ');
+    word_array = [];
 
-document.getElementById("newGameButton").addEventListener('click', () => {
-    newGame();
-    document.getElementById("stats").style.display = "none";
-});
+    timerRunning = false;
+    timer = option;
+    seconds = timer / 60;
+    position = 0;
+    correct = 0;
+    incorrect = 0;
 
-function timeGame() {
-    if (timerRunning) return;
-    timerRunning = true;
+    document.getElementById("text").innerHTML = word_string.split("")
+        .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
+        .join("");
+    document.getElementById("counter").innerHTML = timer;
 
-    var t = setInterval(function () {
-        timer--;
-        document.getElementById("timer").innerHTML = timer;
-        if (timer <= 0) {
-            clearInterval(t);
-            endTest();
+    resetGameState();
+
+    if (!keydownListenerAttached) {
+        document.addEventListener("keydown", handleKeydown);
+        keydownListenerAttached = true;
+    }
+
+    document.getElementById("newGameButton").addEventListener('click', () => {
+        newGame();
+        document.getElementById("stats").style.display = "none";
+    });
+
+    document.getElementById("restart").addEventListener('click', () => {
+        newGame();
+        clearInterval(t);
+        document.getElementById("restart").blur();
+    });
+
+    function newGame() {
+        document.querySelector('.mode-bar').style.visibility = 'visible';
+
+        for (let i = 0; i < option * 5; i++) {
+            word_array.push(word_list[getRandomInt(word_list.length)]);
         }
-    }, 1000);
+        word_string = word_array.join(' ');
+        word_array = [];
+
+        timerRunning = false;
+        words = 0;
+        timer = option;
+        seconds = timer / 60;
+        position = 0;
+        correct = 0;
+        incorrect = 0;
+
+        document.getElementById("text").innerHTML = word_string.split("")
+            .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
+            .join("");
+        document.getElementById("counter").innerHTML = timer;
+        document.getElementById("text").style.marginTop = '0px';
+        moveCursor(0);
+    }
+}
+
+function updateWordData(option) {
+    const info = text_data;
+    if (!info || !info.words) {
+        return;
+    }
+
+    let word_list = info.words;
+    let word_array = [];
+    for (let i = 0; i < option; i++) {
+        word_array.push(word_list[getRandomInt(word_list.length)]);
+    }
+
+    word_string = word_array.join(' ');
+    word_array = [];
+
+    timerRunning = false;
+    words = 0;
+    totalWords = getWordCount(word_string);
+    totalCharacters = word_string.length;
+    timer = 0;
+    position = 0;
+    correct = 0;
+    incorrect = 0;
+
+    document.getElementById("text").innerHTML = word_string.split("")
+        .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
+        .join("");
+    document.getElementById("counter").innerHTML = words + "/" + totalWords;
+
+    resetGameState();
+
+    if (!keydownListenerAttached) {
+        document.addEventListener("keydown", handleKeydown);
+        keydownListenerAttached = true;
+    }
+
+    document.getElementById("newGameButton").addEventListener('click', () => {
+        newGame();
+        document.getElementById("stats").style.display = "none";
+    });
+
+    document.getElementById("restart").addEventListener('click', () => {
+        newGame();
+        clearInterval(t);
+        document.getElementById("restart").blur();
+    });
+
+    function newGame() {
+        document.querySelector('.mode-bar').style.visibility = 'visible';
+
+        for (let i = 0; i < option; i++) {
+            word_array.push(word_list[getRandomInt(word_list.length)]);
+        }
+        word_string = word_array.join(' ');
+        word_array = [];
+
+        timerRunning = false;
+        words = 0;
+        totalWords = option;
+        totalCharacters = word_string.length;
+        timer = 0;
+        position = 0;
+        correct = 0;
+        incorrect = 0;
+
+        document.getElementById("text").innerHTML = word_string.split("")
+            .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
+            .join("");
+        document.getElementById("counter").innerHTML = words + "/" + totalWords;
+        document.getElementById("text").style.marginTop = '0px';
+        moveCursor(0);
+    }
+}
+
+function updateQuoteData(option) {
+    const info = text_data;
+
+    if (!info || !info[option]) return;
+
+    let selectedQuote = info[option][getRandomInt(info[option].length)];
+    quote = selectedQuote.text;
+
+    timerRunning = false;
+    words = 0;
+    totalWords = getWordCount(quote);
+    totalCharacters = selectedQuote.length;
+    timer = 0;
+    position = 0;
+    correct = 0;
+    incorrect = 0;
+
+    document.getElementById("text").innerHTML = quote.split("")
+        .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
+        .join("");
+    document.getElementById("counter").innerHTML = words + "/" + totalWords;
+
+    resetGameState();
+
+    if (!keydownListenerAttached) {
+        document.addEventListener("keydown", handleKeydown);
+        keydownListenerAttached = true;
+    }
+
+    document.getElementById("newGameButton").addEventListener('click', () => {
+        newGame();
+        document.getElementById("stats").style.display = "none";
+    });
+
+    document.getElementById("restart").addEventListener('click', () => {
+        newGame();
+        clearInterval(t);
+        document.getElementById("restart").blur();
+    });
+
+    function newGame() {
+        document.querySelector('.mode-bar').style.visibility = 'visible';
+
+        selectedQuote = info[option][getRandomInt(info[option].length)];
+        quote = selectedQuote.text;
+
+        timerRunning = false;
+        clearInterval(t);
+        words = 0;
+        totalWords = getWordCount(quote);
+        totalCharacters = selectedQuote.length;
+        timer = 0;
+        position = 0;
+        correct = 0;
+        incorrect = 0;
+
+        document.getElementById("text").innerHTML = quote.split("")
+            .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
+            .join("");
+        document.getElementById("counter").innerHTML = words + "/" + totalWords;
+        document.getElementById("text").style.marginTop = '0px';
+        moveCursor(0);
+    }
 }
 
 function handleKeydown(event) {
-    if (timer <= 0) {
-        return;
-    }
+    if (!/^[A-Za-z]$/.test(event.key) && position == 0) return;
     let currentChar = document.getElementById(`letter-${position}`);
-    if (event.key.length == 1) {
-        currentChar.classList.add(event.key == quote[position] ? "correct" : "incorrect");
-        if (event.key == quote[position]) { correct++; }
-        else { incorrect++; }
-        position++;
-        console.log(event.key);
+
+    if (currentMode === 'time') {
+        if (timer <= 0) {
+            return;
+        }
+        if (event.key.length == 1) {
+            currentChar.classList.add(event.key == word_string[position] ? "correct" : "incorrect");
+            if (event.key == word_string[position]) { correct++; }
+            else { incorrect++; }
+            position++;
+            console.log(event.key);
+        }
+        else if (event.key == "Backspace" && position > 0) {
+            position--;
+            currentChar = document.getElementById(`letter-${position}`);
+            currentChar.classList.remove("correct", "incorrect");
+            console.log(event.key);
+        }
     }
-    else if (event.key == "Backspace" && position > 0) {
-        position--;
-        currentChar = document.getElementById(`letter-${position}`);
-        currentChar.classList.remove("correct", "incorrect");
-        console.log(event.key)
+
+    if (currentMode === 'words') {
+        if (event.key.length == 1) {
+            currentChar.classList.add(event.key == word_string[position] ? "correct" : "incorrect");
+            if (event.key == word_string[position]) { correct++; }
+            else { incorrect++; }
+            position++;
+            console.log(event.key);
+        }
+        else if (event.key == "Backspace" && position > 0) {
+            position--;
+            currentChar = document.getElementById(`letter-${position}`);
+            currentChar.classList.remove("correct", "incorrect");
+            console.log(event.key)
+        }
+        if (/^[A-Za-z]$|^ $/.test(event.key) && (word_string[position - 1] === " " || position == totalCharacters)) {
+            words++;
+            document.getElementById("counter").innerHTML = words + "/" + totalWords;
+        }
+        if (event.key === "Backspace" && word_string[position] === " " && words > 0) {
+            words--;
+            document.getElementById("counter").innerHTML = words + "/" + totalWords;
+        }
+    }
+
+    else if (currentMode === 'quotes') {
+        if (event.key.length == 1) {
+            currentChar.classList.add(event.key == quote[position] ? "correct" : "incorrect");
+            if (event.key == quote[position]) { correct++; }
+            else { incorrect++; }
+            position++;
+            console.log(event.key);
+        }
+        else if (event.key == "Backspace" && position > 0) {
+            position--;
+            currentChar = document.getElementById(`letter-${position}`);
+            currentChar.classList.remove("correct", "incorrect");
+            console.log(event.key)
+        }
+        if (/^[A-Za-z]$|^ $/.test(event.key) && (quote[position - 1] === " " || position == totalCharacters)) {
+            words++;
+            document.getElementById("counter").innerHTML = words + "/" + totalWords;
+        }
+        if (event.key === "Backspace" && quote[position] === " " && words > 0) {
+            words--;
+            document.getElementById("counter").innerHTML = words + "/" + totalWords;
+        }
     }
 
     moveCursor(position);
+
     if (position == 1) {
         timeGame();
+        document.querySelector('.mode-bar').style.visibility = 'hidden';
     }
 
     // Scroll the text but keep it at 3 lines
-    // 
-    // if (currentChar.getBoundingClientRect().top > 350) {
-    //     // alert("a")
-    //     const words = document.getElementById("quote");
-    //     const margin = parseInt(words.style.marginTop || '0px')
-    //     words.style.marginTop = (margin - 35) + 'px';
-    // }
+    if (currentChar.getBoundingClientRect().top > 400) {
+        const text = document.getElementById("text");
+        let margin = parseInt(text.style.marginTop || '0px')
+        text.style.marginTop = (margin - 35) + 'px';
+    }
+}
+
+function timeGame() {
+    if (currentMode === 'time') {
+        if (timerRunning) return;
+        timerRunning = true;
+
+        t = setInterval(function () {
+            timer--;
+            document.getElementById("counter").innerHTML = timer;
+            if (timer <= 0) {
+                clearInterval(t);
+                endTest();
+            }
+        }, 1000);
+    }
+    else if (currentMode === 'words' || currentMode === 'quotes') {
+        if (timerRunning) return;
+        timerRunning = true;
+
+        t = setInterval(function () {
+            timer++;
+            if (position == totalCharacters) {
+                clearInterval(t);
+                endTest();
+            }
+        }, 100);
+    }
+}
+
+function endTest() {
+    calculateResults();
+    document.getElementById("stats").style.display = "block";
+}
+
+function calculateResults() {
+    if (currentMode === 'time') {
+        const wpm = position / 5 / seconds;
+        const accuracy = correct / (correct + incorrect) * 100;
+        const type = currentMode.charAt(0).toUpperCase() + currentMode.slice(1) + ' (' + currentOption.value + ' seconds)';
+        document.getElementById("wpm").innerHTML = "WPM: " + wpm.toFixed(0);
+        // document.getElementById("morewpm").innerHTML = wpm.toFixed(2) + " wpm";
+        document.getElementById("accuracy").innerHTML = "Accuracy: " + accuracy.toFixed(0) + "%";
+        // document.getElementById("moreaccuracy").innerHTML = "Accuracy: " + accuracy.toFixed(2) + "% (" + correct + " correct / " + incorrect + " incorrect)";
+        document.getElementById("type").innerHTML = "Test Type: " + type;
+    }
+    if (currentMode === 'words') {
+        const wpm = totalCharacters / 5 / timer * 600;
+        const accuracy = correct / (correct + incorrect) * 100;
+        const type = currentMode.charAt(0).toUpperCase() + currentMode.slice(1) + ' (x' + currentOption.value + ')';
+        document.getElementById("wpm").innerHTML = "WPM: " + wpm.toFixed(0);
+        // document.getElementById("morewpm").innerHTML = wpm.toFixed(2) + " wpm";
+        document.getElementById("accuracy").innerHTML = "Accuracy: " + accuracy.toFixed(0) + "%";
+        // document.getElementById("moreaccuracy").innerHTML = "Accuracy: " + accuracy.toFixed(2) + "% (" + correct + " correct / " + incorrect + " incorrect)";
+        document.getElementById("type").innerHTML = "Test Type: " + type;
+    }
+    else if (currentMode === 'quotes') {
+        const wpm = totalCharacters / 5 / timer * 600;
+        const accuracy = correct / (correct + incorrect) * 100;
+        const type = currentMode.charAt(0).toUpperCase() + currentMode.slice(1) + ' (' + currentOption.value.charAt(0).toUpperCase() + currentOption.value.slice(1) + ')';
+        document.getElementById("wpm").innerHTML = "WPM: " + wpm.toFixed(0);
+        // document.getElementById("morewpm").innerHTML = wpm.toFixed(2) + " wpm";
+        document.getElementById("accuracy").innerHTML = "Accuracy: " + accuracy.toFixed(0) + "%";
+        // document.getElementById("moreaccuracy").innerHTML = "Accuracy: " + accuracy.toFixed(2) + "% (" + correct + " correct / " + incorrect + " incorrect)";
+        document.getElementById("type").innerHTML = "Test Type: " + type;
+    }
+}
+
+function resetGameState() {
+    timerRunning = false;
+    words = 0;
+    position = 0;
+    correct = 0;
+    incorrect = 0;
+}
+
+function getWordCount(str) {
+    const words = str.trim().split(/\s+/);
+    return words.length;
 }
 
 function moveCursor(currentPos) {
@@ -86,34 +420,6 @@ function moveCursor(currentPos) {
     cursor.style.left = currentChar.getBoundingClientRect().left + 'px';
 }
 
-function endTest() {
-    calculateResults();
-    document.getElementById("stats").style.display = "block";
-}
-
-function calculateResults() {
-    const wpm = position / 5 / seconds;
-    const accuracy = correct / (correct + incorrect) * 100;
-    var type = "30 seconds";
-    document.getElementById("wpm").innerHTML = "WPM: " + wpm.toFixed(0);
-    // document.getElementById("morewpm").innerHTML = wpm.toFixed(2) + " wpm";
-    document.getElementById("accuracy").innerHTML = "Accuracy: " + accuracy.toFixed(0) + "%";
-    // document.getElementById("moreaccuracy").innerHTML = "Accuracy: " + accuracy.toFixed(2) + "% (" + correct + " correct / " + incorrect + " incorrect)";
-    document.getElementById("type").innerHTML = "Test Type: " + type;
-}
-
-function newGame() {
-    timer = 30;
-    seconds = timer / 60;
-    position = 0;
-    correct = 0;
-    incorrect = 0;
-    timerRunning = false;
-
-    quote = quotes[getRandomInt(quotes.length)];
-    document.getElementById("quote").innerHTML = quote.split("")
-        .map((char, pos) => `<span id="letter-${pos}">${char}</span>`)
-        .join("");
-    document.getElementById("timer").innerHTML = timer.toString();
-    moveCursor(0)
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
 }

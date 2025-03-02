@@ -1,5 +1,6 @@
 body {
     background-color: #4F7F7F;
+    margin-top: 50px;
 }
 
 header {
@@ -15,6 +16,7 @@ header {
     margin: 0 auto;
     background-color: #284444;
     border-radius: 20px;
+    margin-top: 50px;
     /* Make mode-bar smoothly widen and shrink */
 }
 
@@ -75,11 +77,35 @@ header {
     font-family: 'Open Sans';
     font-size: 1.4rem;
     width: 700px;
-    margin: 50px auto;
+    margin: 100px auto;
 }
 
-#timer {
-    text-align: center;
+.container h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container .counter {
+    left: 0;
+}
+
+.container .restart {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.restart:hover {
+    background-color: #e85d4b;
+    transform: scale(1.05);
 }
 
 .correct {
@@ -91,11 +117,24 @@ header {
     text-decoration: underline;
 }
 
+.content {
+    display: flex;
+    line-height: 35px;
+    height: 110px;
+    overflow: hidden;
+    position: relative;
+    transition: margin-top 0.2s ease;
+}
+
+.text {
+    display: inline-block;
+}
+
 .cursor {
     width: 2px;
     height: 25px;
     background-color: #B2BEB5;
-    position: absolute;
+    position: fixed;
     animation: blink 1s infinite;
 }
 
@@ -147,7 +186,7 @@ header {
     color: black;
 }
 
-#button {
+.button {
     font-size: 18px;
 }
 
@@ -168,9 +207,3 @@ a:visited {
 a:hover {
     color: #336666;
 }
-
-/* div#quote {
-    line-height: 35px;
-    height: 105px;
-    overflow: hidden;
-} */
